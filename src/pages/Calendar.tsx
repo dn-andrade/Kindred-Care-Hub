@@ -180,9 +180,9 @@ export default function CalendarPage() {
           {/* Time labels */}
           <div className="border-r border-border">
             {timeSlots.map((time) => (
-              <div key={time} className="h-16 relative">
-                <span className="absolute -top-2 right-3 text-xs text-muted-foreground font-medium">
-                  {format(new Date(`2024-01-01T${time}`), 'h:mm a')}
+              <div key={time} className="h-16 flex items-center justify-end pr-3">
+                <span className="text-xs text-muted-foreground font-medium">
+                  {format(new Date(`2024-01-01T${time}`), 'HH:mm')}
                 </span>
               </div>
             ))}
@@ -320,9 +320,9 @@ export default function CalendarPage() {
           {/* Time column */}
           <div className="border-r border-border">
             {timeSlots.map((time) => (
-              <div key={time} className="h-16 relative border-b border-border">
-                <span className="absolute -top-2 left-2 text-xs text-muted-foreground font-medium">
-                  {format(new Date(`2024-01-01T${time}`), 'h:mm a')}
+              <div key={time} className="h-16 flex items-center justify-center border-b border-border">
+                <span className="text-xs text-muted-foreground font-medium">
+                  {format(new Date(`2024-01-01T${time}`), 'HH:mm')}
                 </span>
               </div>
             ))}
